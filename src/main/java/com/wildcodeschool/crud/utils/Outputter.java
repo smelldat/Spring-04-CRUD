@@ -51,7 +51,7 @@ public class Outputter implements CommandLineRunner {
         videoGameDAO.delete(gow);
         LOG.info(gow.getName() + " has been deleted !");
 
-        lol.setName("Riot Games");
+        lol.setCompany("Riot Games");
         videoGameDAO.save(lol);
         LOG.info(lol.getName() + " has been updated !");
 
@@ -60,6 +60,9 @@ public class Outputter implements CommandLineRunner {
         for(VideoGame game : videoGameDAO.findAll()) {
             LOG.info(game.toString());
         };
+
+        LOG.info("******************");
+        LOG.info("Objects in DB : " + videoGameDAO.count());
 
     }
 }
