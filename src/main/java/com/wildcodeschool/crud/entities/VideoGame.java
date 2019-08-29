@@ -8,6 +8,10 @@ import javax.persistence.Id;
 @Entity
 public class VideoGame {
 
+    public VideoGame() {
+        // JPA
+    }
+
     public VideoGame(String name, String company, int release_year) {
         this.name = name;
         this.company = company;

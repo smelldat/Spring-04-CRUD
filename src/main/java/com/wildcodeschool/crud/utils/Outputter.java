@@ -44,7 +44,9 @@ public class Outputter implements CommandLineRunner {
 
         LOG.info("******************");
         LOG.info("Users in list are");
-
+        for(VideoGame game : videoGameDAO.findAll()) {
+            LOG.info(game.toString());
+        };
 
         videoGameDAO.delete(gow);
         LOG.info(gow.getName() + " has been deleted !");
@@ -55,6 +57,9 @@ public class Outputter implements CommandLineRunner {
 
         LOG.info("******************");
         LOG.info("Users in list are");
-        
+        for(VideoGame game : videoGameDAO.findAll()) {
+            LOG.info(game.toString());
+        };
+
     }
 }
