@@ -55,7 +55,6 @@ public class Outputter implements CommandLineRunner {
 
         LOG.info("******************");
         LOG.info("Users in list are");
-
-
+        
     }
 }
